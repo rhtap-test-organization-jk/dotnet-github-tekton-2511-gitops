@@ -1,0 +1,18 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata: 
+  labels: 
+    app.kubernetes.io/instance: dotnet-github-tekton-2511
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: dotnet-github-tekton-2511 
+  name: dotnet-github-tekton-2511
+spec:
+  port:
+    targetPort: 8081 
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
+  to:
+    kind: Service
+    name: dotnet-github-tekton-2511
+    weight: 100 

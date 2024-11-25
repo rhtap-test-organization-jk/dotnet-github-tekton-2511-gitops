@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata: 
+  labels: 
+    app.kubernetes.io/instance: dotnet-github-tekton-2511
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: dotnet-github-tekton-2511 
+  name: dotnet-github-tekton-2511
+spec:
+  ports:
+  - port: 8081 
+    targetPort: 8081 
+  selector:
+    app.kubernetes.io/instance: dotnet-github-tekton-2511 
